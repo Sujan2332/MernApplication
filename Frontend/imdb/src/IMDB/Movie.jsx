@@ -18,7 +18,7 @@ const MovieSearch = ({ userId }) => {
     // Fetch user liked movies on login
     const fetchLikedMovies = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/users/${userId}/likedMovies`);
+        const response = await fetch(`http://${process.env.REACT_APP_API_URL}:5000/api/users/${userId}/likedMovies`);
         if (!response.ok) {
           throw new Error('Failed to fetch liked movies');
         }
@@ -46,7 +46,7 @@ const MovieSearch = ({ userId }) => {
         const moviesWithVotes = await Promise.all(
           data.Search.map(async (movie) => {
             try {
-              const voteResponse = await fetch(`http://localhost:5000/api/movie/${movie.imdbID}`);
+              const voteResponse = await fetch(`http://${process.env.REACT_APP_API_URL}:5000/api/movie/${movie.imdbID}`);
               if (!voteResponse.ok) {
                 throw new Error(`Failed to fetch votes for ${movie.Title}`);
               }
@@ -92,7 +92,7 @@ const MovieSearch = ({ userId }) => {
         return;
       }
   
-      const response = await fetch('http://localhost:5000/api/movies/vote', {
+      const response = await fetch(`http://${process.env.REACT_APP_API_URL}:5000/api/movies/vote`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imdbID: movie.imdbID, title: movie.Title, email: userEmail })
