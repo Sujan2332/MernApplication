@@ -2,11 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-
+require('dotenv').config();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/signupDB", { useNewUrlParser: true, useUnifiedTopology: true })
+const privateIp = process.env.PRIVATE_IP_ADDRESS;
+
+mongoose.connect(`mongodb://${privateIp}:27017/signupDB`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => { console.log("MongoDB Connected") })
     .catch(err => console.log(err));
 
