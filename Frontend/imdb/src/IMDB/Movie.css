@@ -1,0 +1,121 @@
+/* MovieSearch.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(285deg,grey,black);
+  }
+nav{
+    background: linear-gradient(285deg, black, rgb(0, 0, 0));
+    margin-top: -15px;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    font-size: 37px;
+    width: 90px;
+    /* height: 80px; */
+    margin: 15px 0px 0px 15px;
+    color: rgb(0, 0, 0);
+    background-color: gold;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px;
+    border: 2px solid #ccc; /* Light border */
+    width: 490px; /* Fixed width */
+    margin-right: 10px; /* Space between input and button */
+    font-size: 20px;
+  }
+  
+  button[type="submit"] {
+    border-radius: 25px; /* Rounded corners */
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 8px 30px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: rgb(230, 17, 17);
+    color: white; /* Darker red on hover */
+  }
+  
+  .movie-cards {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping */
+    /* background: linear-gradient(285deg, black, grey); Gradient background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the card container */
+  }
+  
+  .movie-card {
+    background: linear-gradient(285deg,#222,black); /* White background for the cards */
+    border-radius: 10px; /* Rounded corners for the cards */
+    margin: 20px; /* Space between cards */
+    padding: 10px; /* Padding inside cards */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    width: 300px; /* 3 cards in a row, minus margins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  }
+  
+  .movie-card h2{
+    overflow: hidden;
+  }
+  .movie-card .image {
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Rounded corners for the image */
+    transition: transform 0.3s; /* Transition for image hover */
+  }
+  
+  .movie-card .image:hover {
+    transform: scale(1.05); /* Scale image on hover */
+  }
+  
+  .liked {
+    color: red; /* Change color to red if liked */
+  }
+  
+  button {
+    background: transparent; /* Transparent background for the button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 20px; /* Font size for icons */
+  }
+  
+  button:hover {
+    color: darkred; /* Dark red on hover */
+  }
+  
+  

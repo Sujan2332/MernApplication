@@ -1,0 +1,57 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top */
+  }
+
+  .modal-content {
+    background: gold; /* Gold background color */
+    padding: 20px;
+    border-radius: 8px;
+    color: black; /* Black text color */
+    width: 85%;
+    height: 90%;
+    overflow-y: auto; /* Add scrolling if content is too long */
+    position: relative; /* Position relative to contain the close button */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px; /* Increase the font size for visibility */
+    cursor: pointer;
+    color: black; /* Change color as needed */
+  }
+
+  #poster {
+    border-radius: 20px;
+    height: 300px;
+    transition: transform 0.3s; /* Transition for the hover effect */
+  }
+
+  #poster:hover {
+    transform: scale(1.05); /* Scale image on hover */
+  }
+
+  li{
+    list-style: none;
+  }
+
+  strong{
+    margin: 10px;
+  }
